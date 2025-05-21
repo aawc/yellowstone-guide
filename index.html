@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yellowstone Family Adventure: 3-Day Itinerary</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base styles for light mode */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* light-gray-background */
+            color: #333; /* dark-text */
+        }
+        .container {
+            max-width: 960px;
+        }
+        .section-title {
+            border-bottom: 2px solid #cbd5e1; /* slate-300 */
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .card {
+            background-color: #ffffff; /* light-card-background */
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .map-link {
+            color: #2563eb; /* blue-700 */
+            text-decoration: underline;
+        }
+        .map-link:hover {
+            color: #1d4ed8; /* blue-800 */
+        }
+        .place-image {
+            width: 100%;
+            height: 150px; /* Fixed height for consistency */
+            object-fit: cover; /* Ensures image covers the area, cropping if necessary */
+            border-radius: 0.5rem; /* rounded-lg */
+            margin-bottom: 0.75rem;
+        }
+
+        /* Dark mode styles */
+        html.dark body {
+            background-color: #1a202c; /* dark-gray-background (tailwind gray-900) */
+            color: #e2e8f0; /* light-text (tailwind gray-200) */
+        }
+        html.dark .card {
+            background-color: #2d3748; /* dark-card-background (tailwind gray-800) */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.12);
+        }
+        html.dark .section-title {
+            border-bottom-color: #4a5568; /* dark-slate-300 (tailwind gray-600) */
+        }
+        html.dark .map-link {
+            color: #63b3ed; /* light-blue (tailwind blue-300) */
+        }
+        html.dark .map-link:hover {
+            color: #90cdf4; /* lighter-blue (tailwind blue-200) */
+        }
+        html.dark .text-yellow-800 {
+            color: #fbd38d; /* yellow-300 for dark mode header */
+        }
+        html.dark .text-gray-700 {
+            color: #cbd5e1; /* slate-300 for dark mode general text */
+        }
+        html.dark .text-gray-600 {
+            color: #a0aec0; /* gray-400 for dark mode smaller text */
+        }
+        html.dark .text-gray-800 {
+            color: #e2e8f0; /* gray-200 for dark mode headings */
+        }
+        html.dark .text-green-700 {
+            color: #68d391; /* green-300 for dark mode photography tips */
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="container mx-auto p-4 md:p-8">
+        <header class="text-center mb-8 relative">
+            <h1 class="text-4xl md:text-5xl font-bold text-yellow-800 mb-2">Yellowstone Family Adventure!</h1>
+            <p class="text-xl md:text-2xl text-gray-700">Your 3-Day Itinerary with Young Kids</p>
+            <p class="text-md text-gray-600 mt-2">End of June | Rental Car | Staying at The Canyon Lodge</p>
+
+            <button id="themeToggle" class="absolute top-0 right-0 p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 shadow-md transition-colors duration-300">
+                <svg id="sunIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h1M3 12h1m15.325-4.275l-.707-.707M4.382 19.618l-.707-.707m14.275 0l-.707.707M4.382 4.382l-.707.707"></path>
+                </svg>
+                <svg id="moonIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                </svg>
+            </button>
+        </header>
+
+        <section class="mb-8 card">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4 section-title">Welcome to Yellowstone!</h2>
+            <p class="text-gray-700 leading-relaxed">
+                Get ready for an incredible family adventure in Yellowstone National Park! This 3-day itinerary is crafted to maximize your experience with a 2-year-old and an 8-year-old, focusing on accessible sights, wildlife opportunities, and plenty of wonder. With your base at The Canyon Lodge, you're perfectly positioned to explore different parts of the park each day. Remember to check the official Yellowstone National Park website for the latest road conditions, visitor center hours, and any alerts before and during your trip.
+            </p>
+            <p class="text-gray-700 leading-relaxed mt-2">
+                Don't forget to pack snacks, water, sun protection, and layers of clothing, as Yellowstone weather can change quickly! Consider participating in the Junior Ranger Program for your 8-year-old to make the learning even more interactive.
+            </p>
+        </section>
+
+        <section class="mb-8 card">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4 section-title">Day 1: Canyon's Grandeur & Wildlife Wonders</h2>
+            <p class="text-gray-700 mb-4">Focus on the dramatic Grand Canyon of the Yellowstone, located just a short drive from your lodge, followed by wildlife spotting.</p>
+
+            <div class="mb-6">
+                <h3 class="text-xl font-medium text-gray-800 mb-2">Morning: Grand Canyon of the Yellowstone</h3>
+                <p class="text-gray-700 mb-2">Explore the breathtaking waterfalls and colorful canyon walls. These viewpoints are easily accessible via paved paths and boardwalks, perfect for strollers and little legs.</p>
+                <ul class="list-disc list-inside text-gray-700 ml-4">
+                    <li class="mb-2">
+                        <span class="font-semibold">Artist Point:</span> Offers one of the most iconic views of the Lower Falls and the vibrant canyon. It's a short, easy walk from the parking lot.
+                        <br><span class="text-sm text-gray-600">Parking: Large parking lot available directly at Artist Point. Arrive early for best spots. If full, consider parking at the nearby South Rim Drive pullouts and walking, or try other viewpoints along the South Rim.</span>
+                        <br><span class="text-sm text-green-700 font-semibold">Photography Tip:</span> Early morning light illuminates the canyon walls beautifully. Use a wide-angle lens to capture the entire vista.
+                        <br><a href="https://www.google.com/maps/search/?api=1&query=44.7198,-110.4851" target="_blank" class="map-link">View on Google Maps</a>
+                    </li>
+                    <li class="mb-2">
+                        <span class="font-semibold">Brink of the Lower Falls:</span> A more adventurous walk down a paved path (with some stairs) to feel the power of the falls up close. You can decide if this is suitable for your 2-year-old.
+                        <br><span class="text-sm text-gray-600">Parking: Limited parking at the trailhead. If full, park at Canyon Village and walk (longer walk) or check for available shuttles from Canyon Village during peak season.</span>
+                        <br><span class="text-sm text-green-700 font-semibold">Photography Tip:</span> Capture the sheer force of the water. Be mindful of spray on your lens! A fast shutter speed will freeze the water, while a slower one can create a silky effect.
+                        <br><a href="https://www.google.com/maps/search/?api=1&query=44.7208,-110.4996" target="_blank" class="map-link">View on Google Maps</a>
+                    </li>
+                    <li class="mb-2">
+                        <span class="font-semibold">Brink of the Upper Falls:</span> An easy walk to see the Upper Falls, often less crowded than the Lower Falls viewpoints.
+                        <br><span class="text-sm text-gray-600">Parking: Small parking lot available. Can fill up quickly during peak hours. If full, try parking at Canyon Village and walking the short distance.</span>
+                        <br><span class="text-sm text-green-700 font-semibold">Photography Tip:</span> Great for capturing the waterfall's power and the surrounding forest. Look for rainbows in the mist on sunny days.
+                        <br><a href="https://www.google.com/maps/search/?api=1&query=44.7177,-110.5002" target="_blank" class="map-link">View on Google Maps</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-medium text-gray-800 mb-2">Afternoon: Hayden Valley Wildlife Drive</h3>
+                <p class="text-gray-700 mb-2">Head south from Canyon Village into Hayden Valley, renowned for its abundant wildlife. This is primarily a scenic drive with pullouts for viewing. Keep your eyes peeled for bison, elk, and potentially bears or coyotes!</p>
+                <ul class="list-disc list-inside text-gray-700 ml-4">
+                    <li class="mb-2">
+                        <span class="font-semibold">Hayden Valley:</span> Drive slowly and use binoculars or spotting scopes (if you have them) to observe animals from a safe distance.
+                        <br><span class="text-sm text-gray-600">Parking: Numerous pullouts along the main road. Pull completely off the road when stopping. If a pullout is full, continue to the next one; never block traffic.</span>
+                        <br><span class="text-sm text-green-700 font-semibold">Photography Tip:</span> Best for wildlife photography. A telephoto lens is highly recommended. The "golden hours" (early morning and late evening) offer the best light and most active animals.
+                        <br><a href="https://www.google.com/maps/search/?api=1&query=44.6667,-110.4500" target="_blank" class="map-link">View on Google Maps (General Area)</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="mb-8 card">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4 section-title">Day 2: Geyser Wonders & Hot Springs</h2>
+            <p class="text-gray-700 mb-4">Today, venture to the famous geyser basins in the park's southwest, including the iconic Old Faithful. This will involve more driving, so plan for breaks.</p>
+
+            <div class="mb-6">
+                <h3 class="text-xl font-medium text-gray-800 mb-2">Morning: Old Faithful & Upper Geyser Basin</h3>
+                <p class="text-gray-700 mb-2">Witness the world's most famous geyser and explore the surrounding thermal features.</p>
+                <ul class="list-disc list-inside text-gray-700 ml-4">
+                    <li class="mb-2">
+                        <span class="font-semibold">Old Faithful Geyser:</span> Arrive early to find parking and a good viewing spot. Check the visitor center for predicted eruption times. There's plenty of space for kids to sit and wait.
+                        <br><span class="text-sm text-gray-600">Parking: Large parking lots available at the Old Faithful Village area. These fill up very quickly by mid-morning. If full, consider parking at Biscuit Basin or Black Sand Basin (both a short drive away) and walking/biking the boardwalks to Old Faithful, or waiting for a spot to open.</span>
+                        <br><span class="text-sm text-green-700 font-semibold">Photography Tip:</span> Position yourself to capture the geyser's full height against the sky. Be ready for the eruption; it's quick! Also, explore the colorful pools and steam vents in the surrounding basin.
+                        <br><a href="https://www.google.com/maps/search/?api=1&query=44.4605,-110.4984" target="_blank" class="map-link">View on Google Maps</a>
+                    </li>
+                    <li class="mb-2">
+                        <span class="font-semibold">Upper Geyser Basin Boardwalks:</span> After Old Faithful, explore the extensive network of boardwalks leading to other geysers and hot springs like Grand Geyser and Castle Geyser. These are flat and stroller-friendly.
+                        <br><span class="text-sm text-gray-600">Parking: Park in the main Old Faithful Village parking lots. The boardwalks are accessible from there. Alternate: Park at Biscuit Basin or Black Sand Basin and walk the connecting trails.</span>
+                        <br><span class="text-sm text-green-700 font-semibold">Photography Tip:</span> The vibrant colors of the hot springs and steam rising from the ground make for unique shots. Look for reflections in calm pools.
+                        <br><a href="https://www.google.com/maps/search/?api=1&query=44.4600,-110.4990" target="_blank" class="map-link">View on Google Maps (General Area)</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="mb-6">
+                <h3 class="text-xl font-medium text-gray-800 mb-2">Afternoon: Grand Prismatic Spring & Fountain Paint Pots</h3>
+                <p class="text-gray-700 mb-2">Continue your geothermal exploration with two more unique basins.</p>
+                <ul class="list-disc list-inside text-gray-700 ml-4">
+                    <li class="mb-2">
+                        <span class="font-semibold">Grand Prismatic Spring (Midway Geyser Basin):</span> Marvel at the vibrant colors of this enormous hot spring. The boardwalk is easy to navigate. For an elevated view, consider the short, paved Fairy Falls Overlook trail (check if suitable for your 2-year-old's stamina, as it's a bit of a walk from the parking lot).
+                        <br><span class="text-sm text-gray-600">Parking: A very busy parking lot at Midway Geyser Basin. Be prepared to wait for a spot or circle until one opens up. Alternate: If the main lot is full, consider parking at the Fairy Falls Trailhead (a larger lot) and walking the 0.6-mile trail to the Grand Prismatic Overlook.</span>
+                        <br><span class="text-sm text-green-700 font-semibold">Photography Tip:</span> For the iconic aerial-like shot of the colors, the <span class="font-bold">Fairy Falls Overlook trail</span> is a must. On the boardwalk, look for steam patterns and reflections. Colors are most vibrant on sunny days.
+                        <br><a href="https://www.google.com/maps/search/?api=1&query=44.5250,-110.8381" target="_blank" class="map-link">View on Google Maps (Midway Geyser Basin)</a>
+                    </li>
+                    <li class="mb-2">
+                        <span class="font-semibold">Fountain Paint Pots (Lower Geyser Basin):</span> A fascinating area with bubbling mud pots, colorful hot springs, and small geysers. The boardwalk loop is short and engaging for kids.
+                        <br><span class="text-sm text-gray-600">Parking: Dedicated parking lot available. Generally easier to find a spot than at Grand Prismatic. If full, wait for a spot or consider nearby pullouts if safe and permitted.</span>
+                        <br><span class="text-sm text-green-700 font-semibold">Photography Tip:</span> Focus on the textures and bubbling action of the mud pots. The variety of colors in the pools also makes for interesting close-up shots.
+                        <br><a href="https://www.google.com/maps/search/?api=1&query=44.6401,-110.7431" target="_blank" class="map-link">View on Google Maps</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="mb-8 card">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4 section-title">Day 3: Terraces & Northern Wildlife</h2>
+            <p class="text-gray-700 mb-4">Head north to explore the unique Mammoth Hot Springs and then venture into the renowned Lamar Valley for prime wildlife viewing opportunities.</p>
+
+            <div class="mb-6">
+                <h3 class="text-xl font-medium text-gray-800 mb-2">Morning: Mammoth Hot Springs</h3>
+                <p class="text-gray-700 mb-2">Discover the otherworldly travertine terraces formed by hot spring activity. There are both upper and lower boardwalks to explore.</p>
+                <ul class="list-disc list-inside text-gray-700 ml-4">
+                    <li class="mb-2">
+                        <span class="font-semibold">Mammoth Hot Springs Terraces:</span> Walk the boardwalks on both the Upper and Lower Terraces. The formations are constantly changing, offering unique sights. Many sections are stroller-friendly.
+                        <br><span class="text-sm text-gray-600">Parking: Multiple parking areas for both the Upper and Lower Terraces. The main parking is near the Albright Visitor Center. If these are full, limited street parking might be available in Mammoth Hot Springs village, or you may need to wait for a spot.</span>
+                        <br><span class="text-sm text-green-700 font-semibold">Photography Tip:</span> Capture the intricate details of the travertine formations. The terraces can look very different depending on the light, so experiment with angles.
+                        <br><a href="https://www.google.com/maps/search/?api=1&query=44.9734,-110.7029" target="_blank" class="map-link">View on Google Maps (General Area)</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-medium text-gray-800 mb-2">Afternoon: Lamar Valley Wildlife Viewing</h3>
+                <p class="text-gray-700 mb-2">Known as "America's Serengeti," Lamar Valley is one of the best places in the park to spot large mammals, including bison, elk, and potentially wolves or bears. The drive itself is beautiful.</p>
+                <ul class="list-disc list-inside text-gray-700 ml-4">
+                    <li class="mb-2">
+                        <span class="font-semibold">Lamar Valley:</span> Drive slowly, pull over at designated pullouts, and use binoculars. Early morning or late evening offers the best chances for wildlife. This is a longer drive from Canyon, so plan accordingly.
+                        <br><span class="text-sm text-gray-600">Parking: No specific parking lots, but numerous pullouts along the road for safe wildlife viewing. Always pull completely off the pavement. If a pullout is full, continue to the next one; never block traffic.</span>
+                        <br><span class="text-sm text-green-700 font-semibold">Photography Tip:</span> This is prime wildlife photography territory. Bring a telephoto lens if you have one. The vast landscapes also offer opportunities for wide-angle shots, especially during sunrise or sunset.
+                        <br><a href="https://www.google.com/maps/search/?api=1&query=44.9167,-110.2500" target="_blank" class="map-link">View on Google Maps (General Area)</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="mb-8 card">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4 section-title">Important Notes for Your Trip:</h2>
+            <ul class="list-disc list-inside text-gray-700 ml-4 leading-relaxed">
+                <li class="mb-2">
+                    <span class="font-semibold">Wildlife Safety:</span> Always keep a safe distance from all wildlife (at least 25 yards from bison and elk, 100 yards from bears and wolves). Never feed animals.
+                </li>
+                <li class="mb-2">
+                    <span class="font-semibold">Geothermal Safety:</span> Stay on boardwalks and marked trails at all times. The ground in thermal areas is thin and the water is scalding hot. Supervise children closely.
+                </li>
+                <li class="mb-2">
+                    <span class="font-semibold">Hydration & Snacks:</span> Carry plenty of water and snacks, especially with young children. Food services can be spread out.
+                </li>
+                <li class="mb-2">
+                    <span class="font-semibold">Restrooms:</span> Plan your stops around visitor centers and designated picnic areas where restrooms are available.
+                </li>
+                <li class="mb-2">
+                    <span class="font-semibold">Flexibility:</span> This is a suggestion! Yellowstone is vast. Be flexible and adapt to your children's needs and energy levels. Sometimes, just pulling over to watch bison graze can be the highlight of the day!
+                </li>
+                <li class="mb-2">
+                    <span class="font-semibold">Cell Service:</span> Cell service is very limited in the park. Download maps and information beforehand.
+                </li>
+                <li class="mb-2">
+                    <span class="font-semibold">Parking:</span> Parking can be challenging at popular spots, especially during peak season (end of June). Arrive early, be patient, and be prepared to circle for a spot or visit during off-peak hours if possible. Always park in designated areas and never block traffic.
+                </li>
+                <li class="mb-2">
+                    <span class="font-semibold">Photography Gear:</span> Consider bringing a telephoto lens for wildlife, a wide-angle lens for landscapes, and a polarizing filter to reduce glare on water and enhance colors. Don't forget extra batteries!
+                </li>
+            </ul>
+        </section>
+
+        <footer class="text-center text-gray-600 text-sm mt-8">
+            <p>© 2025 Yellowstone Family Trip Planner. Enjoy your adventure!</p>
+        </footer>
+    </div>
+
+    <script>
+        const themeToggle = document.getElementById('themeToggle');
+        const sunIcon = document.getElementById('sunIcon');
+        const moonIcon = document.getElementById('moonIcon');
+        const htmlElement = document.documentElement;
+
+        // Function to set the theme
+        function setTheme(theme) {
+            if (theme === 'dark') {
+                htmlElement.classList.add('dark');
+                sunIcon.classList.remove('hidden');
+                moonIcon.classList.add('hidden');
+            } else {
+                htmlElement.classList.remove('dark');
+                sunIcon.classList.add('hidden');
+                moonIcon.classList.remove('hidden');
+            }
+            localStorage.setItem('theme', theme);
+        }
+
+        // Check for saved theme preference on load
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            setTheme(savedTheme);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            // Default to system preference if no theme is saved
+            setTheme('dark');
+        } else {
+            setTheme('light'); // Default to light if no preference and system is not dark
+        }
+
+        // Toggle theme on button click
+        themeToggle.addEventListener('click', () => {
+            if (htmlElement.classList.contains('dark')) {
+                setTheme('light');
+            } else {
+                setTheme('dark');
+            }
+        });
+    </script>
+</body>
+</html>
